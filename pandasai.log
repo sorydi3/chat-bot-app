@@ -1,0 +1,1023 @@
+2023-07-26 09:47:25 [INFO] Question: hey
+2023-07-26 09:47:25 [INFO] Running PandasAI with langchain_openai LLM...
+2023-07-26 09:47:25 [INFO] Prompt ID: 7f4be199-de57-4b85-b053-126baac8f6e0
+2023-07-26 09:47:26 [INFO] error_code=None error_message='Unrecognized request argument supplied: api_token' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-07-26 09:48:28 [WARNING] WARNING! api_token is not default parameter.
+                    api_token was transferred to model_kwargs.
+                    Please confirm that api_token is what you intended.
+2023-07-26 09:48:28 [INFO] Question: hey
+2023-07-26 09:48:28 [INFO] Running PandasAI with langchain_openai LLM...
+2023-07-26 09:48:28 [INFO] Prompt ID: 03f25d50-49bf-42aa-9ade-bcb0288deaaa
+2023-07-26 09:48:29 [INFO] error_code=None error_message='Unrecognized request argument supplied: api_token' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-07-26 09:49:57 [INFO] Question: hey
+2023-07-26 09:49:57 [INFO] Running PandasAI with openai LLM...
+2023-07-26 09:49:57 [INFO] Prompt ID: 7ec6d647-54be-4f12-aa51-70be47894bb2
+2023-07-26 09:50:33 [INFO] Question: numbers of rows?
+2023-07-26 09:50:33 [INFO] Running PandasAI with openai LLM...
+2023-07-26 09:50:33 [INFO] Prompt ID: 37180259-d2d4-4c3f-b8c9-4e9d30646a7e
+2023-07-26 09:50:34 [INFO] 
+                        Code generated:
+                        ```
+                        rows = df.shape[0]
+rows
+                        ```
+                    
+2023-07-26 09:50:34 [INFO] 
+Code running:
+```
+rows = df.shape[0]
+rows
+```
+2023-07-26 09:50:34 [INFO] Answer: 67
+2023-07-26 09:50:34 [INFO] Executed in: 1.1804084777832031s
+2023-07-26 09:51:06 [INFO] Question: numero de filas?
+2023-07-26 09:51:06 [INFO] Running PandasAI with openai LLM...
+2023-07-26 09:51:06 [INFO] Prompt ID: 2e44629b-c816-4cce-93a3-daf5d61fbf7d
+2023-07-26 09:51:08 [INFO] 
+                        Code generated:
+                        ```
+                        num_rows = df.shape[0]
+num_rows
+                        ```
+                    
+2023-07-26 09:51:08 [INFO] 
+Code running:
+```
+num_rows = df.shape[0]
+num_rows
+```
+2023-07-26 09:51:08 [INFO] Answer: 67
+2023-07-26 09:51:08 [INFO] Executed in: 1.8347511291503906s
+2023-07-26 09:51:33 [INFO] Question: numero de programas con prorroga?
+2023-07-26 09:51:33 [INFO] Running PandasAI with openai LLM...
+2023-07-26 09:51:33 [INFO] Prompt ID: 440cb430-57d2-49d8-9de3-321acb1c98bd
+2023-07-26 09:51:35 [INFO] 
+                        Code generated:
+                        ```
+                        num_programas_prorroga = len(df[df['TIPUS_PROGRAMA'] == 'PRÒRROGA'])
+num_programas_prorroga
+                        ```
+                    
+2023-07-26 09:51:35 [INFO] 
+Code running:
+```
+num_programas_prorroga = len(df[df['TIPUS_PROGRAMA'] == 'PRÒRROGA'])
+num_programas_prorroga
+```
+2023-07-26 09:51:35 [INFO] Answer: 3
+2023-07-26 09:51:35 [INFO] Executed in: 1.8964118957519531s
+2023-07-26 09:53:06 [INFO] Question: devuelvememe las respuestas en formato tabla. numero de programas con prorroga y su correspondiende nombre de accio?
+2023-07-26 09:53:06 [INFO] Running PandasAI with openai LLM...
+2023-07-26 09:53:06 [INFO] Prompt ID: 2be85644-992c-42a6-8c17-b669ad05fee0
+2023-07-26 10:05:26 [INFO] Question: Programas con fecha final en 2023?
+2023-07-26 10:05:26 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:05:26 [INFO] Prompt ID: 7e632651-ddb0-4441-8f07-c5a68dd7cba8
+2023-07-26 10:05:27 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['DATA_FINAL_VERIFICADA'].dt.year == 2023]
+                        ```
+                    
+2023-07-26 10:05:27 [INFO] 
+Code running:
+```
+df[df['DATA_FINAL_VERIFICADA'].dt.year == 2023]
+```
+2023-07-26 10:05:27 [WARNING] Error executing code (count: 0)
+2023-07-26 10:05:29 [INFO] Answer:                                           Search Name TIPUS_PROGRAMA ESTAT_OPORTUNITAT           ESTAT_RESOLUCIO_CONVENI  ...      DATA_INICI_PROGRAMA DATA_INICI_VERIFICADA DATA_FI_PROGRAMA DATA_FINAL_VERIFICADA
+0                              AJUNTAMENT DE L'ESCALA       PRÒRROGA        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-01 00:00:00.000            2022-10-01       2023-09-30            2023-09-30
+1                                               DGACC       PRÒRROGA        PRESENTADA  FORMALITZACIÓ CONTRACTUAL SIGNAT  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+2                                               DGACC       PRÒRROGA        PRESENTADA  FORMALITZACIÓ CONTRACTUAL SIGNAT  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+3   DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-11-01 00:00:00.000            2022-11-01       2023-10-31            2023-10-31
+5                   AJUNTAMENT DE MAÇANET DE LA SELVA      LICITACIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-09-01 00:00:00.000            2022-09-01       2023-07-31            2023-07-31
+6                                                 SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-12-31 00:00:00.000            2023-02-28       2023-12-31            2023-12-31
+7                                                 SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-12-31 00:00:00.000            2023-03-23       2023-12-31            2023-12-31
+8                                                 SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-05-02 00:00:00.000            2023-05-02       2023-12-31            2023-12-31
+9                                                 SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-12-31 00:00:00.000            2023-03-01       2023-12-31            2023-12-31
+10                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-12-20 00:00:00.000            2022-12-20       2023-12-31            2023-12-31
+11                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-12-31 00:00:00.000            2022-12-20       2023-12-31            2023-12-31
+12                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-02-08 00:00:00.000            2023-02-08       2023-12-31            2023-12-31
+13                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-02-06 00:00:00.000            2023-02-06       2023-12-31            2023-12-31
+14                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-01-24 00:00:00.000            2023-01-24       2023-12-31            2023-12-31
+15                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-12-20 00:00:00.000            2022-12-20       2023-12-31            2023-12-31
+16                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-02-21 00:00:00.000            2023-02-21       2023-12-31            2023-12-31
+17                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-04-12 00:00:00.000            2023-04-12       2023-12-31            2023-12-31
+18                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-04-18 00:00:00.000            2023-04-18       2023-12-31            2023-12-31
+19                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-03-14 00:00:00.000            2023-03-14       2023-12-31            2023-12-31
+20                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-01-13 00:00:00.000            2023-01-13       2023-12-31            2023-12-31
+21                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-02-14 00:00:00.000            2023-02-14       2023-12-31            2023-12-31
+23                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+24                           BARCELONA ACTIVA SAU SPM      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+25                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-13 00:00:00.000            2022-10-13       2023-10-12            2023-10-12
+26                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-12 00:00:00.000            2022-10-13       2023-10-12            2023-10-12
+27                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-13 00:00:00.000            2022-10-13       2023-10-12            2023-10-12
+28                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-13 00:00:00.000            2022-10-13       2023-10-12            2023-10-12
+29                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-13 00:00:00.000            2022-10-13       2023-10-12            2023-10-12
+30                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-13 00:00:00.000            2022-10-13       2023-10-12            2023-10-12
+31                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-13 00:00:00.000            2022-10-13       2023-10-12            2023-10-12
+32                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-31 00:00:00.000            2022-10-31       2023-10-30            2023-10-30
+33                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-13 00:00:00.000            2022-10-13       2023-10-12            2023-10-12
+34                                                SOC      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-10-13 00:00:00.000            2022-10-12       2023-10-12            2023-10-13
+39  DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-07-01 00:00:00.000            2022-07-01       2023-06-30            2023-06-30
+40  DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-07-01 00:00:00.000            2022-07-01       2023-06-30            2023-06-30
+41  DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-07-01 00:00:00.000            2022-07-01       2023-06-30            2023-06-30
+42  DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-07-01 00:00:00.000            2022-07-01       2023-06-30            2023-06-30
+43  DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-07-01 00:00:00.000            2022-07-01       2023-06-30            2023-06-30
+44  DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-07-01 00:00:00.000            2022-07-01       2023-06-30            2023-06-30
+46                      ENTITAT COL·LABORADORA - ECAS      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...                      NaN            2022-01-01       2023-09-30            2023-09-30
+47                      ENTITAT COL·LABORADORA - ECAS      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...                      NaN            2022-10-01       2023-09-30            2023-09-30
+48                      ENTITAT COL·LABORADORA - ECAS      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...                      NaN            2022-10-01       2023-09-30            2023-09-30
+49                      ENTITAT COL·LABORADORA - ECAS      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...                      NaN            2022-10-01       2023-09-30            2023-09-30
+50                      ENTITAT COL·LABORADORA - ECAS      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...                      NaN            2022-10-01       2023-09-30            2023-09-30
+51                       FUNDACIO BANCARIA "LA CAIXA"        DONACIÓ        PRESENTADA  FORMALITZACIÓ CONTRACTUAL SIGNAT  ...  2022-01-03 00:00:00.000            2022-10-11       2023-01-02            2023-10-11
+52                                DIRECCIÓ DE SERVEIS      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-30            2023-12-30
+54                                  REMSA MEMORIAL SA        CONVENI        PRESENTADA  FORMALITZACIÓ CONTRACTUAL SIGNAT  ...  2022-09-01 00:00:00.000            2022-10-01       2023-07-31            2023-07-31
+55              CONSORCI BENESTAR SOCIAL GIRONES SALT      LICITACIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+56                                          CONFORCAT      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-01-20 00:00:00.000            2023-01-20       2023-12-31            2023-12-31
+57                         BARCELONA ACTIVA, SAU, SPM     PRESSUPOST        PRESENTADA             RESOLUCIÓ PROVISIONAL  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+58  DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-11-01 00:00:00.000            2022-11-01       2023-10-31            2023-10-31
+59                       FUNDACIO BANCARIA "LA CAIXA"        CONVENI        PRESENTADA  FORMALITZACIÓ CONTRACTUAL SIGNAT  ...  2023-04-20 00:00:00.000            2023-04-20       2023-07-17            2023-07-17
+60                       FUNDACIO BANCARIA "LA CAIXA"        CONVENI        PRESENTADA  FORMALITZACIÓ CONTRACTUAL SIGNAT  ...  2023-04-26 00:00:00.000            2023-04-26       2023-07-06            2023-07-06
+61                       FUNDACIO BANCARIA "LA CAIXA"        CONVENI        PRESENTADA  FORMALITZACIÓ CONTRACTUAL SIGNAT  ...  2023-01-01 00:00:00.000            2023-04-13       2023-12-30            2023-12-30
+62                       FUNDACIO BANCARIA "LA CAIXA"        CONVENI        PRESENTADA             RESOLUCIÓ PROVISIONAL  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+64                         BARCELONA ACTIVA, SAU, SPM      LICITACIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+66      FUNDACION TRIPARTITA - FORMACION EN EL EMPLEO    BONIFICACIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2023-07-31 00:00:00.000            2023-02-23       2023-08-01            2023-07-31
+
+[57 rows x 12 columns]
+2023-07-26 10:05:29 [INFO] Executed in: 3.9200937747955322s
+2023-07-26 10:06:42 [INFO] Question: Cursos SOC
+2023-07-26 10:06:42 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:06:42 [INFO] Prompt ID: a78ed41a-f26c-4a0b-a599-cd4ff1cc8e2b
+2023-07-26 10:06:43 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['NOM_ACCIO'] == 'Cursos SOC']
+                        ```
+                    
+2023-07-26 10:06:43 [INFO] 
+Code running:
+```
+df[df['NOM_ACCIO'] == 'Cursos SOC']
+```
+2023-07-26 10:06:43 [INFO] Answer: Empty DataFrame
+Columns: [Search Name, TIPUS_PROGRAMA, ESTAT_OPORTUNITAT, ESTAT_RESOLUCIO_CONVENI, ANY_CONVOCATORIA, CONVOCATORIA, NAPR, NOM_ACCIO, DATA_INICI_PROGRAMA, DATA_INICI_VERIFICADA, DATA_FI_PROGRAMA, DATA_FINAL_VERIFICADA]
+Index: []
+2023-07-26 10:06:43 [INFO] Executed in: 1.2390215396881104s
+2023-07-26 10:08:19 [INFO] Question: cursos con una durada de una semana?
+2023-07-26 10:08:19 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:08:19 [INFO] Prompt ID: 552749ac-c10c-4a10-abb1-aa06a74868d6
+2023-07-26 10:08:20 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['DATA_FI_PROGRAMA'] - df['DATA_INICI_PROGRAMA'] == pd.Timedelta(days=7)]
+                        ```
+                    
+2023-07-26 10:08:20 [INFO] 
+Code running:
+```
+df[df['DATA_FI_PROGRAMA'] - df['DATA_INICI_PROGRAMA'] == pd.Timedelta(days=7)]
+```
+2023-07-26 10:08:20 [WARNING] Error executing code (count: 0)
+2023-07-26 10:08:23 [INFO] Answer: Empty DataFrame
+Columns: [Search Name, TIPUS_PROGRAMA, ESTAT_OPORTUNITAT, ESTAT_RESOLUCIO_CONVENI, ANY_CONVOCATORIA, CONVOCATORIA, NAPR, NOM_ACCIO, DATA_INICI_PROGRAMA, DATA_INICI_VERIFICADA, DATA_FI_PROGRAMA, DATA_FINAL_VERIFICADA]
+Index: []
+2023-07-26 10:08:23 [INFO] Executed in: 4.863727807998657s
+2023-07-26 10:09:21 [INFO] Question: Cursos ajuntament de l'escala?
+2023-07-26 10:09:21 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:09:21 [INFO] Prompt ID: 31fd09c9-7a41-41f7-a1a4-eba914a2f65d
+2023-07-26 10:09:23 [INFO] 
+                        Code generated:
+                        ```
+                        cursos_ajuntament_escala = df[df['Search Name'] == "AJUNTAMENT DE L'ESCALA"]
+cursos_ajuntament_escala
+                        ```
+                    
+2023-07-26 10:09:23 [INFO] 
+Code running:
+```
+cursos_ajuntament_escala = df[df['Search Name'] == "AJUNTAMENT DE L'ESCALA"]
+cursos_ajuntament_escala
+```
+2023-07-26 10:09:23 [INFO] Answer:               Search Name TIPUS_PROGRAMA ESTAT_OPORTUNITAT ESTAT_RESOLUCIO_CONVENI  ANY_CONVOCATORIA  ...            NOM_ACCIO      DATA_INICI_PROGRAMA DATA_INICI_VERIFICADA DATA_FI_PROGRAMA DATA_FINAL_VERIFICADA
+0  AJUNTAMENT DE L'ESCALA       PRÒRROGA        PRESENTADA    RESOLUCIÓ DEFINITIVA              2022  ...  Punt Omnia L'Escala  2022-10-01 00:00:00.000            2022-10-01       2023-09-30            2023-09-30
+
+[1 rows x 12 columns]
+2023-07-26 10:09:23 [INFO] Executed in: 1.9427263736724854s
+2023-07-26 10:10:47 [INFO] Question: Cursos ajuntament de girona?
+2023-07-26 10:10:47 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:10:47 [INFO] Prompt ID: e5b8e0be-e7f9-4885-ae29-cf0350546138
+2023-07-26 10:10:49 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['Search Name'] == 'AJUNTAMENT DE GIRONA']
+                        ```
+                    
+2023-07-26 10:10:49 [INFO] 
+Code running:
+```
+df[df['Search Name'] == 'AJUNTAMENT DE GIRONA']
+```
+2023-07-26 10:10:49 [INFO] Answer: Empty DataFrame
+Columns: [Search Name, TIPUS_PROGRAMA, ESTAT_OPORTUNITAT, ESTAT_RESOLUCIO_CONVENI, ANY_CONVOCATORIA, CONVOCATORIA, NAPR, NOM_ACCIO, DATA_INICI_PROGRAMA, DATA_INICI_VERIFICADA, DATA_FI_PROGRAMA, DATA_FINAL_VERIFICADA]
+Index: []
+2023-07-26 10:10:49 [INFO] Executed in: 1.1881186962127686s
+2023-07-26 10:11:28 [INFO] Question: curos fundacio bancaria la caixa?
+2023-07-26 10:11:28 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:11:28 [INFO] Prompt ID: f7b22210-2e3f-4672-8e2f-9b5063f1a352
+2023-07-26 10:11:30 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['Search Name'] == 'curos fundacio bancaria la caixa']
+                        ```
+                    
+2023-07-26 10:11:30 [INFO] 
+Code running:
+```
+df[df['Search Name'] == 'curos fundacio bancaria la caixa']
+```
+2023-07-26 10:11:30 [INFO] Answer: Empty DataFrame
+Columns: [Search Name, TIPUS_PROGRAMA, ESTAT_OPORTUNITAT, ESTAT_RESOLUCIO_CONVENI, ANY_CONVOCATORIA, CONVOCATORIA, NAPR, NOM_ACCIO, DATA_INICI_PROGRAMA, DATA_INICI_VERIFICADA, DATA_FI_PROGRAMA, DATA_FINAL_VERIFICADA]
+Index: []
+2023-07-26 10:11:30 [INFO] Executed in: 1.4279251098632812s
+2023-07-26 10:11:50 [INFO] Question: cursos fundacio bancaria la caixa?
+2023-07-26 10:11:50 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:11:50 [INFO] Prompt ID: fb453eed-bc31-4c01-8815-4c34928b95fe
+2023-07-26 10:11:52 [INFO] 
+                        Code generated:
+                        ```
+                        df[df['Search Name'].str.contains('FUNDACIO BANCARIA LA CAIXA')]
+                        ```
+                    
+2023-07-26 10:11:52 [INFO] 
+Code running:
+```
+df[df['Search Name'].str.contains('FUNDACIO BANCARIA LA CAIXA')]
+```
+2023-07-26 10:11:52 [INFO] Answer: Empty DataFrame
+Columns: [Search Name, TIPUS_PROGRAMA, ESTAT_OPORTUNITAT, ESTAT_RESOLUCIO_CONVENI, ANY_CONVOCATORIA, CONVOCATORIA, NAPR, NOM_ACCIO, DATA_INICI_PROGRAMA, DATA_INICI_VERIFICADA, DATA_FI_PROGRAMA, DATA_FINAL_VERIFICADA]
+Index: []
+2023-07-26 10:11:52 [INFO] Executed in: 1.6867790222167969s
+2023-07-26 10:12:37 [INFO] Question: listado de programas con subvenció?
+2023-07-26 10:12:37 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:12:37 [INFO] Prompt ID: ba0e5d6d-c8ef-4b8f-b5e2-37e816c0e58e
+2023-07-26 10:12:40 [INFO] 
+                        Code generated:
+                        ```
+                        subvencion_programas = df[df['TIPUS_PROGRAMA'] == 'SUBVENCIÓ']
+listado_programas_subvencion = subvencion_programas['NOM_ACCIO'].unique().tolist()
+listado_programas_subvencion
+                        ```
+                    
+2023-07-26 10:12:40 [INFO] 
+Code running:
+```
+subvencion_programas = df[df['TIPUS_PROGRAMA'] == 'SUBVENCIÓ']
+listado_programas_subvencion = subvencion_programas['NOM_ACCIO'].unique().tolist()
+listado_programas_subvencion
+```
+2023-07-26 10:12:40 [INFO] Answer: ["Projecte generador d'ocupació i creació de cooperatives_Girona", "[ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió", '[IMPQ0208_CEN] Perruqueria', "[SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil", "[SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil", '[SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials', '[AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.', '[AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques', '[ADGG0208_CEN] Activitats administratives en la relació amb el client', "[ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents", '[COML0309_CEN] Organització i gestió de magatzems', "[SSCE0110_CEN] Docència de la formació professional per a l'ocupació", '[ADGD0308_CEN] Activitats de gestió administrativa', '[ADGD0208_CEN] Gestió integrada de recursos humans', "I després de l'Institut Què (IDIQ MARESME)?", "Garantia d'Èxit BCN Joves que Descobreixen, Aprenen i s'Ocupen", 'Orientació i acompanyament a la Inserció', 'Treball i formació - Línia Dones', 'SIOAS', 'Programa Formació Professional Ocupacional Dual (SOC-FPODUAL)', 'Línia 1 - Coordinació del programa Diversitat i Empresa', nan, "Projecta't Programes d'orientació professional (OP2022)", "Eix E) Projectes singulars de transformació i millora per a entitats d'economia social i solidària."]
+2023-07-26 10:12:40 [INFO] Executed in: 2.581909418106079s
+2023-07-26 10:13:39 [INFO] Question: listado de programas con subvenció con data inicial y data final?
+2023-07-26 10:13:39 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:13:39 [INFO] Prompt ID: 6f84eda5-d601-4507-ac7d-7465833aa34a
+2023-07-26 10:13:42 [INFO] 
+                        Code generated:
+                        ```
+                        subvencion_df = df[df['TIPUS_PROGRAMA'] == 'SUBVENCIÓ']
+programas_subvencion = subvencion_df[['NOM_ACCIO', 'DATA_INICI_PROGRAMA', 'DATA_FI_PROGRAMA']]
+programas_subvencion
+                        ```
+                    
+2023-07-26 10:13:42 [INFO] 
+Code running:
+```
+subvencion_df = df[df['TIPUS_PROGRAMA'] == 'SUBVENCIÓ']
+programas_subvencion = subvencion_df[['NOM_ACCIO', 'DATA_INICI_PROGRAMA', 'DATA_FI_PROGRAMA']]
+programas_subvencion
+```
+2023-07-26 10:13:42 [INFO] Answer:                                             NOM_ACCIO      DATA_INICI_PROGRAMA DATA_FI_PROGRAMA
+3   Projecte generador d'ocupació i creació de coo...  2022-11-01 00:00:00.000       2023-10-31
+6   [ELEE0109_CEN] Muntatge i manteniment d'instal...  2022-12-31 00:00:00.000       2023-12-31
+7                          [IMPQ0208_CEN] Perruqueria  2022-12-31 00:00:00.000       2023-12-31
+8   [SSCB0209_CEN] Dinamització d'activitats de ll...  2023-05-02 00:00:00.000       2023-12-31
+9   [SSCB0211_CEN] Direcció i coordinació d'activi...  2022-12-31 00:00:00.000       2023-12-31
+10  [SSCS0208_CEN] Atenció sociosanitària a person...  2022-12-20 00:00:00.000       2023-12-31
+11  [AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS,...  2022-12-31 00:00:00.000       2023-12-31
+12  [AFDP0109_CEN] Socorrisme en instal·lacions aq...  2023-02-08 00:00:00.000       2023-12-31
+13  [AFDP0109_CEN] Socorrisme en instal·lacions aq...  2023-02-06 00:00:00.000       2023-12-31
+14  [ADGG0208_CEN] Activitats administratives en l...  2023-01-24 00:00:00.000       2023-12-31
+15  [ADGG0508_CEN] Operacions auxiliars d'enregist...  2022-12-20 00:00:00.000       2023-12-31
+16  [SSCB0211_CEN] Direcció i coordinació d'activi...  2023-02-21 00:00:00.000       2023-12-31
+17  [SSCB0209_CEN] Dinamització d'activitats de ll...  2023-04-12 00:00:00.000       2023-12-31
+18  [COML0309_CEN] Organització i gestió de magatzems  2023-04-18 00:00:00.000       2023-12-31
+19  [SSCE0110_CEN] Docència de la formació profess...  2023-03-14 00:00:00.000       2023-12-31
+20  [ADGD0308_CEN] Activitats de gestió administra...  2023-01-13 00:00:00.000       2023-12-31
+21  [ADGD0208_CEN] Gestió integrada de recursos hu...  2023-02-14 00:00:00.000       2023-12-31
+23        I després de l'Institut Què (IDIQ MARESME)?  2023-01-01 00:00:00.000       2023-12-31
+24  Garantia d'Èxit BCN Joves que Descobreixen, Ap...  2023-01-01 00:00:00.000       2023-12-31
+25           Orientació i acompanyament a la Inserció  2022-10-13 00:00:00.000       2023-10-12
+26           Orientació i acompanyament a la Inserció  2022-10-12 00:00:00.000       2023-10-12
+27           Orientació i acompanyament a la Inserció  2022-10-13 00:00:00.000       2023-10-12
+28           Orientació i acompanyament a la Inserció  2022-10-13 00:00:00.000       2023-10-12
+29           Orientació i acompanyament a la Inserció  2022-10-13 00:00:00.000       2023-10-12
+30           Orientació i acompanyament a la Inserció  2022-10-13 00:00:00.000       2023-10-12
+31           Orientació i acompanyament a la Inserció  2022-10-13 00:00:00.000       2023-10-12
+32           Orientació i acompanyament a la Inserció  2022-10-31 00:00:00.000       2023-10-30
+33           Orientació i acompanyament a la Inserció  2022-10-13 00:00:00.000       2023-10-12
+34           Orientació i acompanyament a la Inserció  2022-10-13 00:00:00.000       2023-10-12
+35                   Treball i formació - Línia Dones                      NaN       2024-02-29
+36                   Treball i formació - Línia Dones                      NaN       2024-04-29
+37                   Treball i formació - Línia Dones                      NaN       2023-04-29
+38                   Treball i formació - Línia Dones                      NaN       2024-02-29
+39                                              SIOAS  2022-07-01 00:00:00.000       2023-06-30
+40                                              SIOAS  2022-07-01 00:00:00.000       2023-06-30
+41                                              SIOAS  2022-07-01 00:00:00.000       2023-06-30
+42                                              SIOAS  2022-07-01 00:00:00.000       2023-06-30
+43                                              SIOAS  2022-07-01 00:00:00.000       2023-06-30
+44                                              SIOAS  2022-07-01 00:00:00.000       2023-06-30
+45  Programa Formació Professional Ocupacional Dua...  2022-12-01 00:00:00.000       2024-01-31
+46  Línia 1 - Coordinació del programa Diversitat ...                      NaN       2023-09-30
+47  Línia 1 - Coordinació del programa Diversitat ...                      NaN       2023-09-30
+48  Línia 1 - Coordinació del programa Diversitat ...                      NaN       2023-09-30
+49  Línia 1 - Coordinació del programa Diversitat ...                      NaN       2023-09-30
+50  Línia 1 - Coordinació del programa Diversitat ...                      NaN       2023-09-30
+52                                                NaN  2023-01-01 00:00:00.000       2023-12-30
+56  Projecta't Programes d'orientació professional...  2023-01-20 00:00:00.000       2023-12-31
+58  Eix E) Projectes singulars de transformació i ...  2022-11-01 00:00:00.000       2023-10-31
+65                                                NaN  2023-01-01 00:00:00.000       2023-12-31
+2023-07-26 10:13:42 [INFO] Executed in: 2.6777572631835938s
+2023-07-26 10:17:56 [INFO] Question: listado de programas con convenio con data inicial y data final?
+2023-07-26 10:17:56 [INFO] Running PandasAI with openai LLM...
+2023-07-26 10:17:56 [INFO] Prompt ID: 407582fe-852c-49eb-9a0d-db39029cc130
+2023-07-26 10:17:58 [INFO] 
+                        Code generated:
+                        ```
+                        df[['NOM_ACCIO', 'DATA_INICI_PROGRAMA', 'DATA_FI_PROGRAMA']]
+                        ```
+                    
+2023-07-26 10:17:58 [INFO] 
+Code running:
+```
+df[['NOM_ACCIO', 'DATA_INICI_PROGRAMA', 'DATA_FI_PROGRAMA']]
+```
+2023-07-26 10:17:58 [INFO] Answer:                                             NOM_ACCIO      DATA_INICI_PROGRAMA DATA_FI_PROGRAMA
+0                                 Punt Omnia L'Escala  2022-10-01 00:00:00.000       2023-09-30
+1   SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒM...  2023-01-01 00:00:00.000       2023-12-31
+2   Pròrroga per al Servei per a la Implementació ...  2023-01-01 00:00:00.000       2023-12-31
+3   Projecte generador d'ocupació i creació de coo...  2022-11-01 00:00:00.000       2023-10-31
+4                                                 NaN  2021-05-04 13:06:01.630       2024-08-30
+..                                                ...                      ...              ...
+62                              Trabajando en Digital  2023-01-01 00:00:00.000       2023-12-31
+63         Digitalització de la formació INCUBA DONES  2023-03-01 00:00:00.000       2024-02-28
+64  Serveis d'Informació i Derivació de Barcelona ...  2023-01-01 00:00:00.000       2023-12-31
+65                                                NaN  2023-01-01 00:00:00.000       2023-12-31
+66              VI MASTER GESTIÓN EMPRESAS SALUDABLES  2023-07-31 00:00:00.000       2023-08-01
+
+[67 rows x 3 columns]
+2023-07-26 10:17:58 [INFO] Executed in: 1.3939342498779297s
+2023-07-26 11:30:24 [INFO] Question: listado de cursos que hacen en gerona con fecha de inicio esta semana?
+2023-07-26 11:30:24 [INFO] Running PandasAI with openai LLM...
+2023-07-26 11:30:24 [INFO] Prompt ID: db1a8938-8818-4f08-9b9a-2c24e6d6b2f5
+2023-07-26 11:30:31 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+from datetime import datetime, timedelta
+
+# Convert date columns to datetime format
+df['DATA_INICI_PROGRAMA'] = pd.to_datetime(df['DATA_INICI_PROGRAMA'])
+df['DATA_FINAL_VERIFICADA'] = pd.to_datetime(df['DATA_FINAL_VERIFICADA'])
+
+# Get the start and end dates of this week
+today = datetime.today()
+start_of_week = today - timedelta(days=today.weekday())
+end_of_week = start_of_week + timedelta(days=6)
+
+# Filter the dataframe for courses in Gerona with start date within this week
+gerona_courses = df[(df['NOM_ACCIO'].str.contains('GERONA', case=False)) & 
+                    (df['DATA_INICI_PROGRAMA'] >= start_of_week) & 
+                    (df['DATA_INICI_PROGRAMA'] <= end_of_week)]
+
+gerona_courses
+                        ```
+                    
+2023-07-26 11:30:31 [INFO] 
+Code running:
+```
+df['DATA_INICI_PROGRAMA'] = pd.to_datetime(df['DATA_INICI_PROGRAMA'])
+df['DATA_FINAL_VERIFICADA'] = pd.to_datetime(df['DATA_FINAL_VERIFICADA'])
+today = datetime.today()
+start_of_week = today - timedelta(days=today.weekday())
+end_of_week = start_of_week + timedelta(days=6)
+gerona_courses = df[df['NOM_ACCIO'].str.contains('GERONA', case=False) & (df['DATA_INICI_PROGRAMA'] >= start_of_week) & (df['DATA_INICI_PROGRAMA'] <= end_of_week)]
+gerona_courses
+```
+2023-07-26 11:30:31 [WARNING] Error executing code (count: 0)
+2023-07-26 11:30:37 [WARNING] Error executing code (count: 1)
+2023-07-26 11:30:43 [WARNING] Error executing code (count: 2)
+2023-07-26 11:30:51 [INFO] Answer: 
+2023-07-26 11:30:51 [INFO] Executed in: 26.037269115447998s
+2023-07-26 11:31:33 [INFO] Question: listado de cursos que se hacen gerona?
+2023-07-26 11:31:33 [INFO] Running PandasAI with openai LLM...
+2023-07-26 11:31:33 [INFO] Prompt ID: c5b978ad-843e-4207-a8c8-cedba998db74
+2023-07-26 11:31:34 [INFO] 
+                        Code generated:
+                        ```
+                        courses_in_gerona = df[df['NOM_ACCIO'].str.contains('GIRONA', case=False)]
+courses_in_gerona
+                        ```
+                    
+2023-07-26 11:31:34 [INFO] 
+Code running:
+```
+courses_in_gerona = df[df['NOM_ACCIO'].str.contains('GIRONA', case=False)]
+courses_in_gerona
+```
+2023-07-26 11:31:34 [WARNING] Error executing code (count: 0)
+2023-07-26 11:31:36 [INFO] Answer:                                          Search Name TIPUS_PROGRAMA ESTAT_OPORTUNITAT           ESTAT_RESOLUCIO_CONVENI  ...      DATA_INICI_PROGRAMA DATA_INICI_VERIFICADA DATA_FI_PROGRAMA DATA_FINAL_VERIFICADA
+1                                              DGACC       PRÒRROGA        PRESENTADA  FORMALITZACIÓ CONTRACTUAL SIGNAT  ...  2023-01-01 00:00:00.000            2023-01-01       2023-12-31            2023-12-31
+3  DIR GRAL ECONOMIA SOCIAL, EL TERCER SECTOR, I ...      SUBVENCIÓ        PRESENTADA              RESOLUCIÓ DEFINITIVA  ...  2022-11-01 00:00:00.000            2022-11-01       2023-10-31            2023-10-31
+
+[2 rows x 12 columns]
+2023-07-26 11:31:36 [INFO] Executed in: 3.513857841491699s
+2023-07-26 11:33:26 [INFO] Question: listado de cursos que se hacen gerona en formato texto y my bien exxplicado?
+2023-07-26 11:33:26 [INFO] Running PandasAI with openai LLM...
+2023-07-26 11:33:26 [INFO] Prompt ID: 0ee4d7e9-74e5-4417-8626-55d847b1cc2e
+2023-07-26 11:33:36 [INFO] 
+                        Code generated:
+                        ```
+                        # Filter the dataframe to include only the rows where the location is "Girona"
+girona_courses = df[df['NOM_ACCIO'].str.contains('GIRONA', case=False)]
+
+# Extract the course names from the filtered dataframe
+course_names = girona_courses['NOM_ACCIO'].tolist()
+
+# Convert the course names to a formatted text
+course_text = "\n".join(course_names)
+
+# Print the formatted text
+print(course_text)
+                        ```
+                    
+2023-07-26 11:33:36 [INFO] 
+Code running:
+```
+girona_courses = df[df['NOM_ACCIO'].str.contains('GIRONA', case=False)]
+course_names = girona_courses['NOM_ACCIO'].tolist()
+course_text = '\n'.join(course_names)
+print(course_text)
+```
+2023-07-26 11:33:36 [WARNING] Error executing code (count: 0)
+2023-07-26 11:33:39 [INFO] Answer: SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA
+Projecte generador d'ocupació i creació de cooperatives_Girona
+2023-07-26 11:33:39 [INFO] Executed in: 13.487535238265991s
+2023-07-26 11:38:05 [INFO] Question: listado de cursos que se hacen gerona en formato texto y my bien exxplicado?
+
+
+2023-07-26 11:38:05 [INFO] Running PandasAI with openai LLM...
+2023-07-26 11:38:05 [INFO] Prompt ID: 4d2d17eb-1b00-42b0-9421-360557010e03
+2023-07-26 11:38:11 [INFO] 
+                        Code generated:
+                        ```
+                        # Filter the dataframe to include only the rows where the location is "GIRONA"
+girona_df = df[df['NOM_ACCIO'].str.contains('GIRONA', case=False)]
+
+# Extract the relevant columns for the list of courses
+courses_list = girona_df[['NOM_ACCIO', 'DATA_INICI_PROGRAMA', 'DATA_FI_PROGRAMA']]
+
+# Convert the dataframe to a formatted text
+courses_text = ""
+for index, row in courses_list.iterrows():
+    course_name = row['NOM_ACCIO']
+    start_date = row['DATA_INICI_PROGRAMA']
+    end_date = row['DATA_FI_PROGRAMA']
+    courses_text += f"Course: {course_name}\nStart Date: {start_date}\nEnd Date: {end_date}\n\n"
+
+# Print the list of courses in a formatted text
+print(courses_text)
+                        ```
+                    
+2023-07-26 11:38:11 [INFO] 
+Code running:
+```
+girona_df = df[df['NOM_ACCIO'].str.contains('GIRONA', case=False)]
+courses_list = girona_df[['NOM_ACCIO', 'DATA_INICI_PROGRAMA', 'DATA_FI_PROGRAMA']]
+courses_text = ''
+for index, row in courses_list.iterrows():
+    course_name = row['NOM_ACCIO']
+    start_date = row['DATA_INICI_PROGRAMA']
+    end_date = row['DATA_FI_PROGRAMA']
+    courses_text += f'Course: {course_name}\nStart Date: {start_date}\nEnd Date: {end_date}\n\n'
+print(courses_text)
+```
+2023-07-26 11:38:11 [WARNING] Error executing code (count: 0)
+2023-07-26 11:38:18 [INFO] Answer: Course: SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA
+Start Date: 2023-01-01 00:00:00.000
+End Date: 2023-12-31
+
+Course: Projecte generador d'ocupació i creació de cooperatives_Girona
+Start Date: 2022-11-01 00:00:00.000
+End Date: 2023-10-31
+
+
+2023-07-26 11:38:18 [INFO] Executed in: 13.005598783493042s
+2023-07-26 11:40:01 [INFO] Question: listado de cursos que se hacen gerona en formato texto y my bien exxplicado?
+
+
+2023-07-26 11:40:01 [INFO] Running PandasAI with openai LLM...
+2023-07-26 11:40:01 [INFO] Prompt ID: 73c0f1d2-1d10-4076-9d42-62057a087ddb
+2023-07-26 11:40:01 [INFO] Using cached response
+2023-07-26 11:40:01 [INFO] 
+Code running:
+```
+girona_df = df[df['NOM_ACCIO'].str.contains('GIRONA', case=False)]
+courses_list = girona_df[['NOM_ACCIO', 'DATA_INICI_PROGRAMA', 'DATA_FI_PROGRAMA']]
+courses_text = ''
+for index, row in courses_list.iterrows():
+    course_name = row['NOM_ACCIO']
+    start_date = row['DATA_INICI_PROGRAMA']
+    end_date = row['DATA_FI_PROGRAMA']
+    courses_text += f'Course: {course_name}\nStart Date: {start_date}\nEnd Date: {end_date}\n\n'
+print(courses_text)
+```
+2023-07-26 11:40:01 [WARNING] Error executing code (count: 0)
+2023-07-26 11:40:08 [INFO] Answer: Course: SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA
+Start Date: 2023-01-01 00:00:00.000
+End Date: 2023-12-31
+
+Course: Projecte generador d'ocupació i creació de cooperatives_Girona
+Start Date: 2022-11-01 00:00:00.000
+End Date: 2023-10-31
+
+
+2023-07-26 11:40:08 [INFO] Executed in: 7.662160634994507s
+2023-07-26 11:41:44 [INFO] Question: plot a histogram de lo differentees cursos que se hacen en girona
+2023-07-26 11:41:44 [INFO] Running PandasAI with openai LLM...
+2023-07-26 11:41:44 [INFO] Prompt ID: e8864c04-0df9-453e-bf65-59c615ade42f
+2023-07-26 11:41:48 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Filter the rows for Girona
+girona_df = df[df["NOM_ACCIO"].str.contains("GIRONA")]
+
+# Count the number of different courses
+course_counts = girona_df["NOM_ACCIO"].value_counts()
+
+# Plot the histogram
+plt.bar(course_counts.index, course_counts.values)
+plt.xlabel("Course")
+plt.ylabel("Count")
+plt.title("Number of Different Courses in Girona")
+plt.xticks(rotation=90)
+plt.show()
+                        ```
+                    
+2023-07-26 11:41:48 [INFO] 
+Code running:
+```
+girona_df = df[df['NOM_ACCIO'].str.contains('GIRONA')]
+course_counts = girona_df['NOM_ACCIO'].value_counts()
+plt.bar(course_counts.index, course_counts.values)
+plt.xlabel('Course')
+plt.ylabel('Count')
+plt.title('Number of Different Courses in Girona')
+plt.xticks(rotation=90)
+plt.show()
+plt.close('all')
+```
+2023-07-26 11:41:49 [INFO] generated new fontManager
+2023-07-26 11:41:50 [WARNING] Error executing code (count: 0)
+2023-07-26 11:41:55 [WARNING] Error executing code (count: 1)
+2023-07-26 11:41:59 [WARNING] Error executing code (count: 2)
+2023-07-26 11:42:04 [INFO] Answer: None
+2023-07-26 11:42:04 [INFO] Executed in: 19.890990734100342s
+2023-07-26 11:56:28 [INFO] Question: listado de cursos?
+2023-07-26 11:56:28 [INFO] Running PandasAI with openai LLM...
+2023-07-26 11:56:28 [INFO] Prompt ID: 410de136-646d-4af5-846a-0a481d9dc4ed
+2023-07-26 11:56:29 [INFO] 
+                        Code generated:
+                        ```
+                        df['NOM_ACCIO'].unique()
+                        ```
+                    
+2023-07-26 11:56:29 [INFO] 
+Code running:
+```
+df['NOM_ACCIO'].unique()
+```
+2023-07-26 11:56:29 [INFO] Answer: ["Punt Omnia L'Escala"
+ 'SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA'
+ "Pròrroga per al Servei per a la Implementació i dinamització de 23 Punts Òmnia a diversos barris i municipis de Catalunya. Per a l'any 2022. Lot 7 - Figueres Bon Pastor"
+ "Projecte generador d'ocupació i creació de cooperatives_Girona" nan
+ 'Assessorament laboral i de formació en recerca de feina'
+ "[ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió"
+ '[IMPQ0208_CEN] Perruqueria'
+ "[SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil"
+ "[SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil"
+ '[SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials'
+ '[AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.'
+ '[AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques'
+ '[ADGG0208_CEN] Activitats administratives en la relació amb el client'
+ "[ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents"
+ '[COML0309_CEN] Organització i gestió de magatzems'
+ "[SSCE0110_CEN] Docència de la formació professional per a l'ocupació"
+ '[ADGD0308_CEN] Activitats de gestió administrativa'
+ '[ADGD0208_CEN] Gestió integrada de recursos humans'
+ "Lot 2 Terres del'Ebre" "I després de l'Institut Què (IDIQ MARESME)?"
+ "Garantia d'Èxit BCN Joves que Descobreixen, Aprenen i s'Ocupen"
+ 'Orientació i acompanyament a la Inserció'
+ 'Treball i formació - Línia Dones' 'SIOAS'
+ 'Programa Formació Professional Ocupacional Dual (SOC-FPODUAL)'
+ 'Línia 1 - Coordinació del programa Diversitat i Empresa'
+ 'Comunitat digital inclusiva' 'PAS ENDAVANT' "Projecte Arrela't"
+ "Projecta't Programes d'orientació professional (OP2022)"
+ 'Homologació de titulacions i Acreditació de competències'
+ "Eix E) Projectes singulars de transformació i millora per a entitats d'economia social i solidària."
+ 'Punt Formatiu' 'Punt formatiu BCN23032' 'Trabajando en Digital'
+ 'Digitalització de la formació INCUBA DONES'
+ "Serveis d'Informació i Derivació de Barcelona Activa"
+ 'VI MASTER GESTIÓN EMPRESAS SALUDABLES']
+2023-07-26 11:56:29 [INFO] Executed in: 0.9980177879333496s
+2023-07-26 11:57:22 [INFO] Question: listado de cursos
+2023-07-26 11:57:22 [INFO] Running PandasAI with openai LLM...
+2023-07-26 11:57:22 [INFO] Prompt ID: 39e3ba2b-3843-4d35-9d17-0e7f2576df8b
+2023-07-26 11:57:23 [INFO] 
+                        Code generated:
+                        ```
+                        df['NOM_ACCIO'].unique()
+                        ```
+                    
+2023-07-26 11:57:23 [INFO] 
+Code running:
+```
+df['NOM_ACCIO'].unique()
+```
+2023-07-26 11:57:23 [INFO] Answer: ["Punt Omnia L'Escala"
+ 'SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA'
+ "Pròrroga per al Servei per a la Implementació i dinamització de 23 Punts Òmnia a diversos barris i municipis de Catalunya. Per a l'any 2022. Lot 7 - Figueres Bon Pastor"
+ "Projecte generador d'ocupació i creació de cooperatives_Girona" nan
+ 'Assessorament laboral i de formació en recerca de feina'
+ "[ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió"
+ '[IMPQ0208_CEN] Perruqueria'
+ "[SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil"
+ "[SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil"
+ '[SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials'
+ '[AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.'
+ '[AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques'
+ '[ADGG0208_CEN] Activitats administratives en la relació amb el client'
+ "[ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents"
+ '[COML0309_CEN] Organització i gestió de magatzems'
+ "[SSCE0110_CEN] Docència de la formació professional per a l'ocupació"
+ '[ADGD0308_CEN] Activitats de gestió administrativa'
+ '[ADGD0208_CEN] Gestió integrada de recursos humans'
+ "Lot 2 Terres del'Ebre" "I després de l'Institut Què (IDIQ MARESME)?"
+ "Garantia d'Èxit BCN Joves que Descobreixen, Aprenen i s'Ocupen"
+ 'Orientació i acompanyament a la Inserció'
+ 'Treball i formació - Línia Dones' 'SIOAS'
+ 'Programa Formació Professional Ocupacional Dual (SOC-FPODUAL)'
+ 'Línia 1 - Coordinació del programa Diversitat i Empresa'
+ 'Comunitat digital inclusiva' 'PAS ENDAVANT' "Projecte Arrela't"
+ "Projecta't Programes d'orientació professional (OP2022)"
+ 'Homologació de titulacions i Acreditació de competències'
+ "Eix E) Projectes singulars de transformació i millora per a entitats d'economia social i solidària."
+ 'Punt Formatiu' 'Punt formatiu BCN23032' 'Trabajando en Digital'
+ 'Digitalització de la formació INCUBA DONES'
+ "Serveis d'Informació i Derivació de Barcelona Activa"
+ 'VI MASTER GESTIÓN EMPRESAS SALUDABLES']
+2023-07-26 11:57:23 [INFO] Executed in: 1.2500786781311035s
+2023-07-26 12:04:58 [INFO] Question: Plot the histogram of countries OF TIPUS DE PROGRAMAS
+2023-07-26 12:04:58 [INFO] Running PandasAI with openai LLM...
+2023-07-26 12:04:58 [INFO] Prompt ID: 03d4d7ca-a321-40b0-8aae-bcd423223566
+2023-07-26 12:05:01 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Plot the histogram
+df["TIPUS_PROGRAMA"].value_counts().plot(kind="bar")
+
+# Add labels and title
+plt.xlabel("TIPUS_PROGRAMA")
+plt.ylabel("Count")
+plt.title("Histogram of TIPUS_PROGRAMA")
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-26 12:05:01 [INFO] 
+Code running:
+```
+df['TIPUS_PROGRAMA'].value_counts().plot(kind='bar')
+plt.xlabel('TIPUS_PROGRAMA')
+plt.ylabel('Count')
+plt.title('Histogram of TIPUS_PROGRAMA')
+plt.show()
+plt.close('all')
+```
+2023-07-26 12:05:02 [INFO] Answer: None
+2023-07-26 12:05:02 [INFO] Executed in: 3.9191384315490723s
+2023-07-26 12:05:26 [INFO] Question: Plot the histogram of countries OF TIPUS DE PROGRAMAS
+
+
+2023-07-26 12:05:26 [INFO] Running PandasAI with openai LLM...
+2023-07-26 12:05:26 [INFO] Prompt ID: e953038f-6705-4028-adf4-824d9fff53c9
+2023-07-26 12:05:30 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Count the occurrences of each TIPUS_PROGRAMA
+tipus_programa_counts = df['TIPUS_PROGRAMA'].value_counts()
+
+# Plot the histogram
+plt.bar(tipus_programa_counts.index, tipus_programa_counts.values)
+plt.xlabel('TIPUS_PROGRAMA')
+plt.ylabel('Count')
+plt.title('Histogram of TIPUS_PROGRAMA')
+plt.show()
+                        ```
+                    
+2023-07-26 12:05:30 [INFO] 
+Code running:
+```
+tipus_programa_counts = df['TIPUS_PROGRAMA'].value_counts()
+plt.bar(tipus_programa_counts.index, tipus_programa_counts.values)
+plt.xlabel('TIPUS_PROGRAMA')
+plt.ylabel('Count')
+plt.title('Histogram of TIPUS_PROGRAMA')
+plt.show()
+plt.close('all')
+```
+2023-07-26 12:05:30 [INFO] Answer: None
+2023-07-26 12:05:30 [INFO] Executed in: 3.1453680992126465s
+2023-07-26 12:08:08 [INFO] Question: listado de cursos?
+2023-07-26 12:08:08 [INFO] Running PandasAI with openai LLM...
+2023-07-26 12:08:08 [INFO] Prompt ID: 43387376-b5a5-43e5-839f-73d82bdbfc3f
+2023-07-26 12:08:08 [INFO] Using cached response
+2023-07-26 12:08:08 [INFO] 
+Code running:
+```
+df['NOM_ACCIO'].unique()
+```
+2023-07-26 12:08:08 [INFO] Answer: ["Punt Omnia L'Escala"
+ 'SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA'
+ "Pròrroga per al Servei per a la Implementació i dinamització de 23 Punts Òmnia a diversos barris i municipis de Catalunya. Per a l'any 2022. Lot 7 - Figueres Bon Pastor"
+ "Projecte generador d'ocupació i creació de cooperatives_Girona" nan
+ 'Assessorament laboral i de formació en recerca de feina'
+ "[ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió"
+ '[IMPQ0208_CEN] Perruqueria'
+ "[SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil"
+ "[SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil"
+ '[SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials'
+ '[AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.'
+ '[AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques'
+ '[ADGG0208_CEN] Activitats administratives en la relació amb el client'
+ "[ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents"
+ '[COML0309_CEN] Organització i gestió de magatzems'
+ "[SSCE0110_CEN] Docència de la formació professional per a l'ocupació"
+ '[ADGD0308_CEN] Activitats de gestió administrativa'
+ '[ADGD0208_CEN] Gestió integrada de recursos humans'
+ "Lot 2 Terres del'Ebre" "I després de l'Institut Què (IDIQ MARESME)?"
+ "Garantia d'Èxit BCN Joves que Descobreixen, Aprenen i s'Ocupen"
+ 'Orientació i acompanyament a la Inserció'
+ 'Treball i formació - Línia Dones' 'SIOAS'
+ 'Programa Formació Professional Ocupacional Dual (SOC-FPODUAL)'
+ 'Línia 1 - Coordinació del programa Diversitat i Empresa'
+ 'Comunitat digital inclusiva' 'PAS ENDAVANT' "Projecte Arrela't"
+ "Projecta't Programes d'orientació professional (OP2022)"
+ 'Homologació de titulacions i Acreditació de competències'
+ "Eix E) Projectes singulars de transformació i millora per a entitats d'economia social i solidària."
+ 'Punt Formatiu' 'Punt formatiu BCN23032' 'Trabajando en Digital'
+ 'Digitalització de la formació INCUBA DONES'
+ "Serveis d'Informació i Derivació de Barcelona Activa"
+ 'VI MASTER GESTIÓN EMPRESAS SALUDABLES']
+2023-07-26 12:08:08 [INFO] Executed in: 0.0021331310272216797s
+2023-07-26 12:08:41 [INFO] Question: listado de cursos?
+2023-07-26 12:08:41 [INFO] Running PandasAI with openai LLM...
+2023-07-26 12:08:41 [INFO] Prompt ID: 10e0b357-a925-4013-beff-75f22cbaed81
+2023-07-26 12:08:41 [INFO] Using cached response
+2023-07-26 12:08:41 [INFO] 
+Code running:
+```
+df['NOM_ACCIO'].unique()
+```
+2023-07-26 12:08:41 [INFO] Answer: ["Punt Omnia L'Escala"
+ 'SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA'
+ "Pròrroga per al Servei per a la Implementació i dinamització de 23 Punts Òmnia a diversos barris i municipis de Catalunya. Per a l'any 2022. Lot 7 - Figueres Bon Pastor"
+ "Projecte generador d'ocupació i creació de cooperatives_Girona" nan
+ 'Assessorament laboral i de formació en recerca de feina'
+ "[ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió"
+ '[IMPQ0208_CEN] Perruqueria'
+ "[SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil"
+ "[SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil"
+ '[SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials'
+ '[AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.'
+ '[AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques'
+ '[ADGG0208_CEN] Activitats administratives en la relació amb el client'
+ "[ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents"
+ '[COML0309_CEN] Organització i gestió de magatzems'
+ "[SSCE0110_CEN] Docència de la formació professional per a l'ocupació"
+ '[ADGD0308_CEN] Activitats de gestió administrativa'
+ '[ADGD0208_CEN] Gestió integrada de recursos humans'
+ "Lot 2 Terres del'Ebre" "I després de l'Institut Què (IDIQ MARESME)?"
+ "Garantia d'Èxit BCN Joves que Descobreixen, Aprenen i s'Ocupen"
+ 'Orientació i acompanyament a la Inserció'
+ 'Treball i formació - Línia Dones' 'SIOAS'
+ 'Programa Formació Professional Ocupacional Dual (SOC-FPODUAL)'
+ 'Línia 1 - Coordinació del programa Diversitat i Empresa'
+ 'Comunitat digital inclusiva' 'PAS ENDAVANT' "Projecte Arrela't"
+ "Projecta't Programes d'orientació professional (OP2022)"
+ 'Homologació de titulacions i Acreditació de competències'
+ "Eix E) Projectes singulars de transformació i millora per a entitats d'economia social i solidària."
+ 'Punt Formatiu' 'Punt formatiu BCN23032' 'Trabajando en Digital'
+ 'Digitalització de la formació INCUBA DONES'
+ "Serveis d'Informació i Derivació de Barcelona Activa"
+ 'VI MASTER GESTIÓN EMPRESAS SALUDABLES']
+2023-07-26 12:08:41 [INFO] Executed in: 0.0016715526580810547s
+2023-07-26 12:09:30 [INFO] Question: listado de cursos?
+2023-07-26 12:09:30 [INFO] Running PandasAI with openai LLM...
+2023-07-26 12:09:30 [INFO] Prompt ID: 51845c84-9493-4b7f-8ab0-5bb37080ee6b
+2023-07-26 12:09:30 [INFO] Using cached response
+2023-07-26 12:09:30 [INFO] 
+Code running:
+```
+df['NOM_ACCIO'].unique()
+```
+2023-07-26 12:09:30 [INFO] Answer: ["Punt Omnia L'Escala"
+ 'SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA'
+ "Pròrroga per al Servei per a la Implementació i dinamització de 23 Punts Òmnia a diversos barris i municipis de Catalunya. Per a l'any 2022. Lot 7 - Figueres Bon Pastor"
+ "Projecte generador d'ocupació i creació de cooperatives_Girona" nan
+ 'Assessorament laboral i de formació en recerca de feina'
+ "[ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió"
+ '[IMPQ0208_CEN] Perruqueria'
+ "[SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil"
+ "[SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil"
+ '[SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials'
+ '[AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.'
+ '[AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques'
+ '[ADGG0208_CEN] Activitats administratives en la relació amb el client'
+ "[ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents"
+ '[COML0309_CEN] Organització i gestió de magatzems'
+ "[SSCE0110_CEN] Docència de la formació professional per a l'ocupació"
+ '[ADGD0308_CEN] Activitats de gestió administrativa'
+ '[ADGD0208_CEN] Gestió integrada de recursos humans'
+ "Lot 2 Terres del'Ebre" "I després de l'Institut Què (IDIQ MARESME)?"
+ "Garantia d'Èxit BCN Joves que Descobreixen, Aprenen i s'Ocupen"
+ 'Orientació i acompanyament a la Inserció'
+ 'Treball i formació - Línia Dones' 'SIOAS'
+ 'Programa Formació Professional Ocupacional Dual (SOC-FPODUAL)'
+ 'Línia 1 - Coordinació del programa Diversitat i Empresa'
+ 'Comunitat digital inclusiva' 'PAS ENDAVANT' "Projecte Arrela't"
+ "Projecta't Programes d'orientació professional (OP2022)"
+ 'Homologació de titulacions i Acreditació de competències'
+ "Eix E) Projectes singulars de transformació i millora per a entitats d'economia social i solidària."
+ 'Punt Formatiu' 'Punt formatiu BCN23032' 'Trabajando en Digital'
+ 'Digitalització de la formació INCUBA DONES'
+ "Serveis d'Informació i Derivació de Barcelona Activa"
+ 'VI MASTER GESTIÓN EMPRESAS SALUDABLES']
+2023-07-26 12:09:48 [INFO] Conversational answer: Sure! Here is a list of courses available:
+
+1. Punt Omnia L'Escala
+2. SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26 BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA
+3. Pròrroga per al Servei per a la Implementació i dinamització de 23 Punts Òmnia a diversos barris i municipis de Catalunya. Per a l'any 2022. Lot 7 - Figueres Bon Pastor
+4. Projecte generador d'ocupació i creació de cooperatives_Girona
+5. Assessorament laboral i de formació en recerca de feina
+6. [ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió
+7. [IMPQ0208_CEN] Perruqueria
+8. [SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil
+9. [SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil
+10. [SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials
+11. [AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.
+12. [AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques
+13. [ADGG0208_CEN] Activitats administratives en la relació amb el client
+14. [ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents
+15. [COML0309_CEN] Organització i gestió de magatzems
+16. [SSCE0110_CEN] Docència de la formació professional per a l'ocupació
+17. [ADGD0308_CEN] Activitats de gestió administrativa
+18. [
+2023-07-26 12:09:48 [INFO] Executed in: 18.47477650642395s
+2023-07-26 12:10:40 [INFO] Question: listado de cursos con todos los cursos disponibles?
+2023-07-26 12:10:40 [INFO] Running PandasAI with openai LLM...
+2023-07-26 12:10:40 [INFO] Prompt ID: e2d667b8-8fa0-48ba-87e7-2df81d126c4a
+2023-07-26 12:10:41 [INFO] 
+                        Code generated:
+                        ```
+                        df['NOM_ACCIO'].unique()
+                        ```
+                    
+2023-07-26 12:10:41 [INFO] 
+Code running:
+```
+df['NOM_ACCIO'].unique()
+```
+2023-07-26 12:10:41 [INFO] Answer: ["Punt Omnia L'Escala"
+ 'SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26  BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA'
+ "Pròrroga per al Servei per a la Implementació i dinamització de 23 Punts Òmnia a diversos barris i municipis de Catalunya. Per a l'any 2022. Lot 7 - Figueres Bon Pastor"
+ "Projecte generador d'ocupació i creació de cooperatives_Girona" nan
+ 'Assessorament laboral i de formació en recerca de feina'
+ "[ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió"
+ '[IMPQ0208_CEN] Perruqueria'
+ "[SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil"
+ "[SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil"
+ '[SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials'
+ '[AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.'
+ '[AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques'
+ '[ADGG0208_CEN] Activitats administratives en la relació amb el client'
+ "[ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents"
+ '[COML0309_CEN] Organització i gestió de magatzems'
+ "[SSCE0110_CEN] Docència de la formació professional per a l'ocupació"
+ '[ADGD0308_CEN] Activitats de gestió administrativa'
+ '[ADGD0208_CEN] Gestió integrada de recursos humans'
+ "Lot 2 Terres del'Ebre" "I després de l'Institut Què (IDIQ MARESME)?"
+ "Garantia d'Èxit BCN Joves que Descobreixen, Aprenen i s'Ocupen"
+ 'Orientació i acompanyament a la Inserció'
+ 'Treball i formació - Línia Dones' 'SIOAS'
+ 'Programa Formació Professional Ocupacional Dual (SOC-FPODUAL)'
+ 'Línia 1 - Coordinació del programa Diversitat i Empresa'
+ 'Comunitat digital inclusiva' 'PAS ENDAVANT' "Projecte Arrela't"
+ "Projecta't Programes d'orientació professional (OP2022)"
+ 'Homologació de titulacions i Acreditació de competències'
+ "Eix E) Projectes singulars de transformació i millora per a entitats d'economia social i solidària."
+ 'Punt Formatiu' 'Punt formatiu BCN23032' 'Trabajando en Digital'
+ 'Digitalització de la formació INCUBA DONES'
+ "Serveis d'Informació i Derivació de Barcelona Activa"
+ 'VI MASTER GESTIÓN EMPRESAS SALUDABLES']
+2023-07-26 12:10:59 [INFO] Conversational answer: Aquí tienes un listado de los cursos disponibles:
+
+1. Punt Omnia L'Escala
+2. SERVEIS PER A LA IMPLEMENTACIÓ DEL PROGRAMA ÒMNIA A 26 BARRIS DE 9 MUNICIPIS DE CATALUNYA. Any 2023. Lot 11: GIRONA FONT DE LA POLVORA
+3. Pròrroga per al Servei per a la Implementació i dinamització de 23 Punts Òmnia a diversos barris i municipis de Catalunya. Per a l'any 2022. Lot 7 - Figueres Bon Pastor
+4. Projecte generador d'ocupació i creació de cooperatives_Girona
+5. Assessorament laboral i de formació en recerca de feina
+6. [ELEE0109_CEN] Muntatge i manteniment d'instal·lacions elèctriques de baixa tensió
+7. [IMPQ0208_CEN] Perruqueria
+8. [SSCB0209_CEN] Dinamització d'activitats de lleure educatiu infantil i juvenil
+9. [SSCB0211_CEN] Direcció i coordinació d'activitats d'educació en el lleure infantil i juvenil
+10. [SSCS0208_CEN] Atenció sociosanitària a persones dependents en institucions socials
+11. [AGAO0108_CEN] ACTIVITATS AUXILIARS EN VIVERS, JARDINS I CENTRES DE JARDINERIA.
+12. [AFDP0109_CEN] Socorrisme en instal·lacions aquàtiques
+13. [ADGG0208_CEN] Activitats administratives en la relació amb el client
+14. [ADGG0508_CEN] Operacions auxiliars d'enregistrament i tractament de dades i documents
+15. [COML0309_CEN] Organització i gestió de magatzems
+16. [SSCE0110_CEN] Docència de la formació professional per a l'ocupació
+17. [ADGD0308_CEN] Activitats de gestió administrativa
+18.
+2023-07-26 12:10:59 [INFO] Executed in: 19.15327000617981s
+2023-07-26 12:12:03 [INFO] Question: LListat de cursos disponible con fecha de finalization en este mes?
+2023-07-26 12:12:03 [INFO] Running PandasAI with openai LLM...
+2023-07-26 12:12:03 [INFO] Prompt ID: 25499dd2-e389-40ea-a9df-cf60db6e353c
+2023-07-26 12:12:09 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+# Convert the date columns to datetime format
+df['DATA_INICI_PROGRAMA'] = pd.to_datetime(df['DATA_INICI_PROGRAMA'])
+df['DATA_FI_PROGRAMA'] = pd.to_datetime(df['DATA_FI_PROGRAMA'])
+
+# Filter the dataframe to include only rows where the program end date is in the current month
+current_month = pd.Timestamp.now().month
+current_year = pd.Timestamp.now().year
+filtered_df = df[(df['DATA_FI_PROGRAMA'].dt.month == current_month) & (df['DATA_FI_PROGRAMA'].dt.year == current_year)]
+
+# Get the list of courses with their end dates
+course_list = filtered_df[['NOM_ACCIO', 'DATA_FI_PROGRAMA']]
+
+# Print the list of courses
+print(course_list)
+                        ```
+                    
+2023-07-26 12:12:09 [INFO] 
+Code running:
+```
+df['DATA_INICI_PROGRAMA'] = pd.to_datetime(df['DATA_INICI_PROGRAMA'])
+df['DATA_FI_PROGRAMA'] = pd.to_datetime(df['DATA_FI_PROGRAMA'])
+current_month = pd.Timestamp.now().month
+current_year = pd.Timestamp.now().year
+filtered_df = df[(df['DATA_FI_PROGRAMA'].dt.month == current_month) & (df['DATA_FI_PROGRAMA'].dt.year == current_year)]
+course_list = filtered_df[['NOM_ACCIO', 'DATA_FI_PROGRAMA']]
+print(course_list)
+```
+2023-07-26 12:12:09 [INFO] Answer:                                             NOM_ACCIO DATA_FI_PROGRAMA
+5   Assessorament laboral i de formació en recerca...       2023-07-31
+54                                  Projecte Arrela't       2023-07-31
+59                                      Punt Formatiu       2023-07-17
+60                             Punt formatiu BCN23032       2023-07-06
+2023-07-26 12:12:14 [INFO] Conversational answer: Estos son los cursos disponibles con fecha de finalización en este mes:
+
+1. Assessorament laboral i de formació en recerca... - Finaliza el 31 de julio de 2023.
+2. Projecte Arrela't - Finaliza el 31 de julio de 2023.
+3. Punt Formatiu - Finaliza el 17 de julio de 2023.
+4. Punt formatiu BCN23032 - Finaliza el 6 de julio de 2023.
+2023-07-26 12:12:14 [INFO] Executed in: 10.167507648468018s
