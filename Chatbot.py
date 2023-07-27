@@ -35,7 +35,7 @@ with st.sidebar:
     st.write(dt)
 
 
-st.title("🔎 Gentis chatbot")
+st.title("🔎 Suport virtual")
 st.image("./gentis5.png")
 
 # add image to the center of the page using markdown
@@ -50,7 +50,7 @@ if "messages" not in st.session_state:
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
-if prompt := st.chat_input(placeholder="Who won the Women's U.S. Open in 2018?"):
+if prompt := st.chat_input(placeholder="Quins cursos hi ha a Girona?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
 
