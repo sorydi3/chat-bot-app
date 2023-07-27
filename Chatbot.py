@@ -13,8 +13,8 @@ import os
 # CODI_AUDITORIA,dbo_EMPRESAS.ENTITAT,CODI,CODI_SERVEI,Search Name,TIPUS_PROGRAMA,ESTAT_OPORTUNITAT,ESTAT_RESOLUCIO_CONVENI,ANY_CONVOCATORIA,CONVOCATORIA,CODI_PROGRAMA_,NAPR,NOM_ACCIO,CODI_SERVEI_ESPECIALITAT_UP,NUM_EXPEDIENT,ACTIVACIO_PROGRAMES,DATA_INICI_PROGRAMA,DATA_INICI_VERIFICADA,DATA_FI_PROGRAMA,DATA_FINAL_VERIFICADA,
 with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", type="password")
-    dt = pd.read_excel('/workspaces/chat-bot-app/cursos.xlsx')
-    csv_file = dt.to_csv('/workspaces/chat-bot-app/cursos_.csv', index=False)
+    dt = pd.read_excel('./cursos.xlsx')
+    csv_file = dt.to_csv('./cursos_.csv', index=False)
     dt = pd.read_csv('./cursos_.csv')
     columns_to_drops = ['CODI_AUDITORIA', 'dbo_EMPRESAS.ENTITAT', 'CODI', 'CODI_SERVEI',
                         'CODI_SERVEI_ESPECIALITAT_UP', 'CODI_PROGRAMA_', 'NUM_EXPEDIENT', 'ACTIVACIO_PROGRAMES']
@@ -22,7 +22,7 @@ with st.sidebar:
     dt.rename(columns={'Search Name': 'NOM_BUSQUEDA'})
     os.environ["OPENAI_API_KEY"] = openai_api_key
     # convert to csv
-    csv_file = dt.to_csv('/workspaces/chat-bot-app/cursos_.csv', index=False)
+    csv_file = dt.to_csv('./cursos_.csv', index=False)
     st.write(dt)
 
 
