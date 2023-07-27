@@ -70,7 +70,8 @@ if prompt := st.chat_input(placeholder="Who won the Women's U.S. Open in 2018?")
     with st.chat_message("assistant"):
         st_cb = StreamlitCallbackHandler(
             st.container(), expand_new_thoughts=False)
-
+        language_prompt = "The response  of the user question must always be in Catalan. \n\n"
+        prompt = prompt + "\n\n" + language_prompt
         response = pandas_ai(df,prompt=prompt)
         print("Pandas AI RESPONSE", response)
         st.session_state.messages.append(
