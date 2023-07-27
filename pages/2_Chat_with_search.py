@@ -18,7 +18,7 @@ from pandasai.llm.openai import OpenAI as PandasOpenAI
 import os
 # CODI_AUDITORIA,dbo_EMPRESAS.ENTITAT,CODI,CODI_SERVEI,Search Name,TIPUS_PROGRAMA,ESTAT_OPORTUNITAT,ESTAT_RESOLUCIO_CONVENI,ANY_CONVOCATORIA,CONVOCATORIA,CODI_PROGRAMA_,NAPR,NOM_ACCIO,CODI_SERVEI_ESPECIALITAT_UP,NUM_EXPEDIENT,ACTIVACIO_PROGRAMES,DATA_INICI_PROGRAMA,DATA_INICI_VERIFICADA,DATA_FI_PROGRAMA,DATA_FINAL_VERIFICADA,
 with st.sidebar:
-    openai_api_key = st.text_input("OpenAI API Key", type="password")
+    openai_api_key = st.secrets.OPENAI_API_KEY
     dt = pd.read_excel('./cursos.xlsx')
     csv_file = dt.to_csv('./cursos_.csv', index=False)
     dt = pd.read_csv('./cursos_.csv')
