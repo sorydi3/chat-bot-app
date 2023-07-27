@@ -3,6 +3,8 @@ enableCORS = false
 enableXsrfProtection = false
 
 
-
-
-
+[theme]
+primaryColor = "#3F9E92"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F0F0"
+textColor = "#3F9E92"
